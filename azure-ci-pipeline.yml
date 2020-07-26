@@ -20,7 +20,9 @@ steps:
 - script: ls -la
   displayName: Content In Current
 - script: ls -la '$(Agent.BuildDirectory)'
-  displayName: Content In Build Directory
+  displayName: Content In Agent Build Directory
+- script: ls -la '$(Build.SourcesDirectory)'
+  displayName: Content In Build Sources Directory
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Agent.BuildDirectory)'
