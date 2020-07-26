@@ -25,7 +25,7 @@ steps:
   displayName: Content In Build Sources Directory
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Agent.BuildDirectory)'
+    SourceFolder: '$(Build.SourceDirectory)/sample-lib/bin/Debug/netstandard2.0'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
