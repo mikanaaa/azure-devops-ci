@@ -18,7 +18,9 @@ steps:
 - script: pwd
   displayName: Print working directory
 - script: ls -la
-  displayName: Content
+  displayName: Content In Current
+- script: ls -la '$(Agent.BuildDirectory)'
+  displayName: Content In Build Directory
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Agent.BuildDirectory)'
