@@ -11,8 +11,6 @@ steps:
   displayName: Test project
 - script: echo Completed
   displayName: Completed
-- task: DownloadBuildArtifacts@0
-  inputs:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Agent.BuildDirectory)'
