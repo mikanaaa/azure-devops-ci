@@ -1,0 +1,13 @@
+trigger:
+- master
+
+pool:
+  vmImage: "ubuntu-latest"
+
+steps:
+- script: dotnet build
+  displayName: Build project
+- script: dotnet test
+  displayName: Test project
+- script: echo Completed
+  displayName: Completed
