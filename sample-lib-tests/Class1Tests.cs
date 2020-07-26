@@ -22,7 +22,7 @@ namespace sample_lib_tests
       //Arange
       int expected = 3;
       //Act
-      int actual = Class1.Sum(1, 3);
+      int actual = Class1.Sum(1, 2);
       //Assert
       Assert.Equal(expected, actual);
     }
