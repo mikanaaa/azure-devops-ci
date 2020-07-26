@@ -11,6 +11,14 @@ steps:
   displayName: Test project
 - script: echo Completed
   displayName: Completed
+- script: echo '$(Agent.BuildDirectory)'
+  displayName: Build Directory
+- script: echo '$(Build.ArtifactStagingDirectory)'
+  displayName: Artifact Staging Directory
+- script: pwd
+  displayName: Print working directory
+- script: la -la
+  displayName: Content
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Agent.BuildDirectory)/sample-lib/bin/Debug/netstandard2.0'
