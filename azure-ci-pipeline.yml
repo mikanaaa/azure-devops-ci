@@ -25,6 +25,7 @@ steps:
   displayName: Content In Build Sources Directory
 - script: env | sort
   displayName: All env vars
+- script: echo '$(mykey)'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/sample-lib/bin/Debug/netstandard2.0'
